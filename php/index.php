@@ -8,8 +8,6 @@ $jsonData = file_get_contents($jsonFilePath);
 // Decodifica il JSON in un array
 $albums = json_decode($jsonData, true);
 
-// Stampa l'array
-print_r($albums);
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +37,11 @@ print_r($albums);
                 </h1>
                 <div class="container-fluid d-flex align-items-center justify-content-center border">
                     <div v-for="album in albums" class="card mb-3">
-
+                        <h1 class="card-title">
+                            {{ album.titolo }}
+                        </h1>
+                        <p class="card-text">Author: {{ album.autore }}</p>
+                        <p class="card-text">Release date: {{ album.dataUscita }}</p>
                     </div>
                 </div>
             </section>
