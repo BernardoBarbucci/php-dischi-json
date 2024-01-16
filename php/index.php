@@ -26,7 +26,20 @@ $albums = json_decode($jsonData, true);
     <!-- axios -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <!-- css -->
-    <link rel="stylesheet" href="../css/style.css">
+    <style>
+    main {
+        height: 100vh;
+        background: linear-gradient(180deg, #360568, #5b2a86);
+        color: white;
+    }
+
+    .custom_album {
+        height: 12rem;
+        width: 10rem;
+        border: 2px solid limegreen;
+        background-color: #a780c8;
+    }
+    </style>
 </head>
 
 <body>
@@ -37,9 +50,9 @@ $albums = json_decode($jsonData, true);
                 <h1 class="pt-2 mb-5">
                     Dischi json
                 </h1>
-                <div class="container-fluid d-flex align-items-center justify-content-center border">
-                    <div v-for="album in albums" class="col d-flex flex-wrap">
-                        <div class="card">
+                <section class="col-12">
+                    <div class="container-fluid d-flex flex-wrap">
+                        <div v-for="album in albums" class="custom_album">
                             <h1>
                                 {{ album.titolo }}
                             </h1>
@@ -47,8 +60,7 @@ $albums = json_decode($jsonData, true);
                             <p>Release date: {{ album.dataUscita }}</p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
         </main>
     </div>
 
