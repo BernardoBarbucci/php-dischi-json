@@ -65,13 +65,11 @@ $albums = [
 ];
 
 // Percorso del file JSON
-$jsonFilePath = 'albums.json';
+$jsonFilePath = './json/albums.json';
 
 // Converte l'array in formato JSON e lo scrive nel file
 file_put_contents($jsonFilePath, json_encode($albums, JSON_PRETTY_PRINT));
 
-// Restituisci l'array come risposta alla richiesta
-header('Content-Type: application/json');
-echo json_encode($albums, JSON_PRETTY_PRINT);
+echo 'File JSON creato con successo.';
 
 ?>
