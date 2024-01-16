@@ -3,6 +3,9 @@
 // Percorso del file JSON
 $jsonFilePath = '../json/albums.json';
 
+$jsonData = file_get_contents($jsonFilePath);
+
+
 ?>
 
 <!DOCTYPE html>
