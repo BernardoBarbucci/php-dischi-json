@@ -5,7 +5,11 @@ $jsonFilePath = '../json/albums.json';
 
 $jsonData = file_get_contents($jsonFilePath);
 
+// Decodifica il JSON in un array
+$albums = json_decode($jsonData, true);
 
+// Stampa l'array
+print_r($albums);
 ?>
 
 <!DOCTYPE html>
