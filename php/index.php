@@ -33,11 +33,14 @@ print_r($albums);
 
     <div id="app">
         <main class="container-fluid">
-            <section class="col-8 offset-2 d-flex justify-content-center">
-                <div>
-                    <h1 class="pt-2">
-                        Dischi json
-                    </h1>
+            <section class="col-8 offset-2 d-flex justify-content-center flex-column">
+                <h1 class="pt-2 mb-5">
+                    Dischi json
+                </h1>
+                <div class="container-fluid d-flex align-items-center justify-content-center border">
+                    <div v-for="album in albums" class="card mb-3">
+
+                    </div>
                 </div>
             </section>
         </main>
