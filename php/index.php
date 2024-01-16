@@ -21,11 +21,7 @@ $albums = json_decode($jsonData, true);
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- vuejs -->
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-    <!-- axios -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-    <!-- css -->
+
     <style>
     main {
         height: 100vh;
@@ -34,10 +30,16 @@ $albums = json_decode($jsonData, true);
     }
 
     .custom_album {
-        height: 12rem;
-        width: 10rem;
-        border: 2px solid limegreen;
-        background-color: #a780c8;
+        height: 13rem;
+        width: 11rem;
+        border: 2px solid #e53f71;
+        background-color: #f89f5b;
+        border-radius: 10px;
+        color: black;
+    }
+
+    p:last-child {
+        font-size: .75rem;
     }
     </style>
 </head>
@@ -52,8 +54,9 @@ $albums = json_decode($jsonData, true);
                 </h1>
                 <section class="col-12">
                     <div class="container-fluid d-flex flex-wrap">
-                        <div v-for="album in albums" class="custom_album">
-                            <h1>
+                        <div v-for="album in albums"
+                            class="custom_album m-2 text-center d-flex flex-column justify-content-around">
+                            <h1 class="fs-4">
                                 {{ album.titolo }}
                             </h1>
                             <p>Author: {{ album.autore }}</p>
